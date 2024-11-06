@@ -1,0 +1,1 @@
+neofetch | grep Kernel

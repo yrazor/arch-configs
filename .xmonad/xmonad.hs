@@ -7,6 +7,7 @@ import XMonad.Util.Run
 import XMonad.Util.EZConfig
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
+import XMonad.Hooks.SetWMName
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
@@ -246,6 +247,7 @@ myLogHook = return ()
 myStartupHook = do
 	spawnOnce "nitrogen --restore &"
 	spawnOnce "picom &"
+	setWMName "LG3D"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
@@ -255,7 +257,7 @@ myStartupHook = do
 main :: IO ()
 main = do
 	xmproc <- spawnPipe "xmobar -x 0 /home/nathan/.config/xmobar/xmobarrc"
-	xmonad $ docks defaults 
+	xmonad $ docks defaults
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
 -- use the defaults defined in xmonad/XMonad/Config.hs

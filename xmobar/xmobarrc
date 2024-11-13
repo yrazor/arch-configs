@@ -54,9 +54,11 @@ Config { font            = "Ubuntu Bold 9"
                     , Run Date "<fn=2>\xf017</fn>  %b %d %Y - (%H:%M) " "date" 50
 		        -- Eth price
 		    , Run Com "/home/nathan/.config/xmobar/eth-price.sh" [] "eth" 300
+		        -- Eth icon
+		    , Run Com "echo" ["<fn=2>\xf42e</fn>"] "ethicon" 3600
 		    , Run UnsafeStdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "  <box type=Bottom width=2 mb=2 color=#34d5eb><fc=#34d5eb>Arch Linux</fc></box> <fc=#34d5eb>|</fc> <box type=Bottom width=2 mb=2 color=#34d5eb><fc=#34d5eb>%currentuser%@%host%</fc></box>} {<box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7>%eth% </fc></box>   <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7>%penguin% %kernel% </fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7><action=`alacritty -e htop`>%cpu%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7><action=`alacritty -e htop`>%memory%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7>%disku%</fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7>%uparrow%  %uptime%</fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7>%baticon%  %battery%</fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7><action=`emacsclient -c -a 'emacs' --eval '(doom/window-maximize-buffer(dt/year-calendar))'`>%date%</action></fc></box> "
+       , template = "  <box type=Bottom width=2 mb=2 color=#34d5eb><fc=#34d5eb>Arch Linux</fc></box> <fc=#34d5eb>|</fc> <box type=Bottom width=2 mb=2 color=#34d5eb><fc=#34d5eb>%currentuser%@%host%</fc></box>} {<box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7>%ethicon% %eth% </fc></box>   <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7>%penguin% %kernel% </fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7><action=`alacritty -e htop`>%cpu%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7><action=`alacritty -e htop`>%memory%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7>%disku%</fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7>%uparrow%  %uptime%</fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7>%baticon%  %battery%</fc></box>    <box type=Bottom width=2 mb=2 color=#b478e7><fc=#b478e7><action=`emacsclient -c -a 'emacs' --eval '(doom/window-maximize-buffer(dt/year-calendar))'`>%date%</action></fc></box> "
        }

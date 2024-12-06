@@ -66,6 +66,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch firefox
     , ((modm,               xK_f     ), spawn "firefox")
 
+    -- launch vscode
+    , ((modm,               xK_x     ), spawn "code")
+
+    -- launch idea
+    , ((modm,               xK_v     ), spawn "idea")
     -- launch xmobar
     , ((modm .|. shiftMask, xK_x     ), spawn "xmobar -x 0 /home/nathan/.config/xmobar/xmobarrc")
 
@@ -247,6 +252,7 @@ myLogHook = return ()
 myStartupHook = do
 	spawnOnce "nitrogen --restore &"
 	spawnOnce "picom &"
+	spawnOnce "/usr/lib/polkit-kde-authentication-agent-1 &"
 	setWMName "LG3D"
 
 ------------------------------------------------------------------------
